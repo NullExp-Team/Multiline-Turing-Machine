@@ -31,9 +31,11 @@ class AppImages {
   static const AssetImage confused =
       AssetImage('resources/images/confused.png');
   static const AssetImage appIcon = AssetImage('resources/images/app_icon.png');
-  static const AssetImage ZedNull = AssetImage('resources/images/zed_null.jpg');
-  static const AssetImage IAmGirya =
-      AssetImage('resources/images/i_am_girya.jpg');
-  static const AssetImage StarProxima =
-      AssetImage('resources/images/star_proxima.jpg');
+  static const AssetImage Slava = AssetImage('resources/images/Slava.jpg');
+  static const AssetImage Anton =
+      AssetImage('resources/images/Anton.jpg');
+  static const AssetImage Egor =
+      AssetImage('resources/images/Egor.jpg');
+  static const AssetImage Ivan =
+    AssetImage('resources/images/Ivan.jpg');
 }

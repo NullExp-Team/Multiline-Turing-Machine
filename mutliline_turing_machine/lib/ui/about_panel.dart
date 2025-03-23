@@ -360,28 +360,28 @@ class _AboutPanel extends State<AboutPanel> {
                                 gitUrl: 'https://github.com/z0tedd',
                                 description:
                                     'Проектирование, справка, панель правил, состояний и комментариев, иконки, нижняя панель инстументов, настройки, тестирование.',
-                                avatar: Image(image: AppImages.ZedNull)),
+                                avatar: Image(image: AppImages.Anton)),
                             const DeveloperCard(
                                 name: 'Гришанов Егор',
                                 email: '@marseIIeze',
                                 gitUrl: 'https://github.com/marselleze',
                                 description:
                                     'Дизайн всего приложения, панель правил, состояний и комментариев, иконки, раздел "О приложении".',
-                                avatar: Image(image: AppImages.ZedNull)),
+                                avatar: Image(image: AppImages.Egor)),
                             const DeveloperCard(
                                 name: 'Матанцев Иван',
                                 email: '@ivan1i',
                                 gitUrl: 'https://github.com/littelRepka',
                                 description:
                                     'Импорт/экспорт сохранений, ячейка ленты, ввод в ленту, добавление/удаление лент, вверхняя панель инстументов.',
-                                avatar: Image(image: AppImages.StarProxima)),
+                                avatar: Image(image: AppImages.Ivan)),
                             const DeveloperCard(
                                 name: 'Костенко Вечеслав',
                                 email: '@eclipsessd',
                                 gitUrl: 'https://github.com/Diploid4',
                                 description:
                                     'Модель машины Тьюринга, лента, очистка ленты, подсчёт конфигураций, хоткеи, автоматическая работа машины Тьюринга.',
-                                avatar: Image(image: AppImages.IAmGirya)),
+                                avatar: Image(image: AppImages.Slava)),
                             Container(
                               margin: const EdgeInsets.only(
                                   top: 32, left: 32, bottom: 16),
