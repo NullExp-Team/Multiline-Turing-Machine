@@ -282,7 +282,7 @@ class _AboutPanel extends State<AboutPanel> {
                                           height: 6,
                                         ),
                                         Tooltip(
-                                          message: '14.02.2023',
+                                          message: '14.03.2025',
                                           waitDuration:
                                               const Duration(milliseconds: 200),
                                           verticalOffset: 14,
@@ -312,10 +312,10 @@ class _AboutPanel extends State<AboutPanel> {
                                             child: ElevatedButton(
                                               onPressed: () {
                                                 launchUrlString(
-                                                    'https://github.com/NullExp-Team');
+                                                    'https://github.com/z0tedd/Multiline-Turing-Machine');
                                               },
                                               child: Text(
-                                                "github.com/NullExp-Team",
+                                                "https://github.com/z0tedd/Multiline-Turing-Machine",
                                                 textAlign: TextAlign.left,
                                                 style: TextStyle(
                                                   color: Theme.of(context)
@@ -355,25 +355,32 @@ class _AboutPanel extends State<AboutPanel> {
                               ),
                             ),
                             const DeveloperCard(
-                                name: 'Хахук Рустам',
-                                email: 'delta.null@vk.com',
-                                gitUrl: 'https://github.com/Null-Delta',
+                                name: 'Файтельсон Антон',
+                                email: '@z0tedd',
+                                gitUrl: 'https://github.com/z0tedd',
                                 description:
-                                    'Дизайн всего приложения, проектирование, справка, панель правил, состояний и комментариев, иконки, нижняя панель инстументов, настройки.',
+                                    'Проектирование, справка, панель правил, состояний и комментариев, иконки, нижняя панель инстументов, настройки, тестирование.',
                                 avatar: Image(image: AppImages.ZedNull)),
                             const DeveloperCard(
-                                name: 'Прозоров Максим',
-                                email: 'StarProxima@yandex.ru',
-                                gitUrl: 'https://github.com/StarProxima',
+                                name: 'Гришанов Егор',
+                                email: '@marseIIeze',
+                                gitUrl: 'https://github.com/marselleze',
                                 description:
-                                    'Импорт/экспорт сохранений, ячейка ленты, ввод в ленту, добавление/удаление лент, вверхняя панель инстументов, тестирование.',
+                                    'Дизайн всего приложения, панель правил, состояний и комментариев, иконки, раздел "О приложении".',
+                                avatar: Image(image: AppImages.ZedNull)),
+                            const DeveloperCard(
+                                name: 'Матанцев Иван',
+                                email: '@ivan1i',
+                                gitUrl: 'https://github.com/littelRepka',
+                                description:
+                                    'Импорт/экспорт сохранений, ячейка ленты, ввод в ленту, добавление/удаление лент, вверхняя панель инстументов.',
                                 avatar: Image(image: AppImages.StarProxima)),
                             const DeveloperCard(
-                                name: 'Гиренко Даниил',
-                                email: 'iamgirya@yandex.ru',
-                                gitUrl: 'https://github.com/iamgirya',
+                                name: 'Костенко Вечеслав',
+                                email: '@eclipsessd',
+                                gitUrl: 'https://github.com/Diploid4',
                                 description:
-                                    'Модель машины Тьюринга, лента, очистка ленты, раздел "О приложении", подсчёт конфигураций, хоткеи, автоматическая работа машины Тьюринга.',
+                                    'Модель машины Тьюринга, лента, очистка ленты, подсчёт конфигураций, хоткеи, автоматическая работа машины Тьюринга.',
                                 avatar: Image(image: AppImages.IAmGirya)),
                             Container(
                               margin: const EdgeInsets.only(
