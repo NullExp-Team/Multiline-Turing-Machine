@@ -17,8 +17,11 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
+# Flutter version is managed by FVM (see .fvm/fvm_config.json)
+# Required Flutter version: 3.24.5
 environment:
-  sdk: ">=2.16.2 <3.0.0"
+  sdk: ">=2.16.2 <4.0.0"
+  flutter: ">=3.24.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -39,7 +42,6 @@ dependencies:
   linked_scroll_controller: ^0.2.0
   provider: ^6.0.2
   file_picker: ^4.5.1
-  material_snackbar: ^2.0.0-nullsafety.1
   window_size:
     git:
       url: https://github.com/google/flutter-desktop-embedding.git

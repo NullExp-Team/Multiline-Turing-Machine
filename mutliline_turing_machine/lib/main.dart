@@ -2,8 +2,6 @@ import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_window_close/flutter_window_close.dart';
-import 'package:material_snackbar/snackbar.dart';
-import 'package:material_snackbar/snackbar_messenger.dart';
 import 'package:multi_split_view/multi_split_view.dart';
 import 'package:mutliline_turing_machine/model/turing_machine.dart';
 import 'package:mutliline_turing_machine/model/turing_machine_model.dart';
@@ -165,9 +163,8 @@ class _MainWidgetState extends State<MainWidget> {
 
       if (text != "" && !isShackBarShow) {
         isShackBarShow = true;
-        MaterialSnackBarMessenger.of(sfContext).emptyQueue();
-        MaterialSnackBarMessenger.of(sfContext).showSnackBar(
-            snackbar: errorSnackBar(text), alignment: Alignment.bottomRight);
+        ScaffoldMessenger.of(sfContext).clearSnackBars();
+        ScaffoldMessenger.of(sfContext).showSnackBar(errorSnackBar(text));
       }
     },
     onResetWork: () {
@@ -189,10 +186,8 @@ class _MainWidgetState extends State<MainWidget> {
             bottomPanelState.currentState!.setState(() {});
 
             isShackBarShow = true;
-            MaterialSnackBarMessenger.of(sfContext).emptyQueue();
-            MaterialSnackBarMessenger.of(sfContext).showSnackBar(
-                snackbar: errorSnackBar(message),
-                alignment: Alignment.bottomRight);
+            ScaffoldMessenger.of(sfContext).clearSnackBars();
+            ScaffoldMessenger.of(sfContext).showSnackBar(errorSnackBar(message));
           }
 
           statesListState.currentState!.setState(() {});
@@ -215,10 +210,8 @@ class _MainWidgetState extends State<MainWidget> {
           bottomPanelState.currentState!.setState(() {});
 
           isShackBarShow = true;
-          MaterialSnackBarMessenger.of(sfContext).emptyQueue();
-          MaterialSnackBarMessenger.of(sfContext).showSnackBar(
-              snackbar: errorSnackBar(message),
-              alignment: Alignment.bottomRight);
+          ScaffoldMessenger.of(sfContext).clearSnackBars();
+          ScaffoldMessenger.of(sfContext).showSnackBar(errorSnackBar(message));
         }
 
         statesListState.currentState!.setState(() {});
@@ -249,26 +242,25 @@ class _MainWidgetState extends State<MainWidget> {
     tableState.currentState!.updateTableState();
   }
 
-  MaterialSnackbar errorSnackBar(String text) {
-    return MaterialSnackbar(
-      onDismiss: () {
-        isShackBarShow = false;
-      },
-      theme: SnackBarThemeData(
-          shape: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(6),
-              ),
-              borderSide: BorderSide(color: Colors.transparent, width: 0)),
-          backgroundColor: text == "!"
-              ? Theme.of(context).primaryColor
-              : Theme.of(context).colorScheme.error,
-          actionTextColor: Theme.of(context).colorScheme.background,
-          contentTextStyle:
-              TextStyle(color: Theme.of(context).colorScheme.background)),
+  SnackBar errorSnackBar(String text) {
+    return SnackBar(
       content: Text(
         text == "!" ? "Машина завершила выполнение." : text,
-        style: TextStyle(color: Theme.of(context).colorScheme.background),
+        style: TextStyle(color: Theme.of(context).colorScheme.surface),
+      ),
+      backgroundColor: text == "!"
+          ? Theme.of(context).primaryColor
+          : Theme.of(context).colorScheme.error,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(6)),
+      ),
+      behavior: SnackBarBehavior.floating,
+      action: SnackBarAction(
+        label: 'OK',
+        textColor: Theme.of(context).colorScheme.surface,
+        onPressed: () {
+          isShackBarShow = false;
+        },
       ),
     );
   }
